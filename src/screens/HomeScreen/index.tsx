@@ -1,54 +1,17 @@
 import React from 'react';
-import { View, Text, TextInput, FlatList, Image } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import restaurants from '../../data/restaurants.json';
 import tags from '../../data/tags.json';
-import IRestaurant from '../../models/IRestaurant';
-import ITag from '../../models/ITag';
+import TagsList from '../../components/organisms/TagsList';
+import RestaurantsList from '../../components/organisms/RestaurantsList';
 import styles from './styles';
 
 const HomeScreen = (props: any) => {
-	const RenderTag = ({ tag }: { tag: ITag }) => {
-		return (
-			<View style={styles.tagContainer}>
-				<Image
-					source={{ uri: tag.image }}
-					resizeMode='contain'
-					style={styles.tagImage}
-				/>
-				<View style={styles.tagTextContainer}>
-					<Text style={styles.tagText}>{tag.name}</Text>
-				</View>
-			</View>
-		);
-	};
-
-	const RenderRestaurant = ({ restaurant }: { restaurant: IRestaurant }) => {
-		return (
-			<View style={styles.restaurantContainer}>
-				<View style={styles.restaurantImageContainer}>
-					<Image
-						source={{ uri: restaurant.logo }}
-						resizeMode='contain'
-						style={styles.restaurantImage}
-					/>
-				</View>
-				<View style={styles.restaurantTextInfoContainer}>
-					<Text style={styles.restaurantTitleText}>
-						{restaurant.name}
-					</Text>
-					<Text style={styles.restaurantSubTitleText}>
-						{restaurant.tags
-							.map((tag: ITag) => tag.name)
-							.join(', ')}
-					</Text>
-				</View>
-			</View>
-		);
-	};
+	const { container } = styles;
 
 	return (
-		<View style={styles.container}>
+		<View style={container}>
 			<View style={styles.headerContainer}>
 				<View style={styles.headerSubContainer}>
 					<View style={styles.headerIconContainer}>
@@ -62,25 +25,12 @@ const HomeScreen = (props: any) => {
 					</View>
 				</View>
 			</View>
-			<View style={styles.tagsListContainer}>
-				<FlatList
-					data={tags}
-					renderItem={({ item }) => <RenderTag tag={item} />}
-					horizontal
-				/>
-			</View>
+			<TagsList data={tags} />
 			<View style={styles.body}>
 				<View style={styles.bodyTitleContainer}>
 					<Text style={styles.bodyTitle}>Restaurants</Text>
 				</View>
-				<View style={styles.restaurantsListContainer}>
-					<FlatList
-						data={restaurants.brands}
-						renderItem={({ item }) => (
-							<RenderRestaurant restaurant={item} />
-						)}
-					/>
-				</View>
+				<RestaurantsList data={restaurants.brands} />
 			</View>
 		</View>
 	);

@@ -5,15 +5,14 @@ import {
 	Image,
 	TouchableOpacity,
 	TouchableWithoutFeedback,
-	FlatList,
 } from 'react-native';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import restaurants from '../../data/restaurants.json';
 import styles from './styles';
-import BottomSheet from '../../components/BottomSheet';
-import IItem from '../../models/IItem';
-import IBranch from '../../models/IBranch';
+import ItemsList from '../../components/organisms/ItemsList';
+import BottomSheet from '../../components/UI/BottomSheet';
+import BranchesSheet from '../../components/UI/BranchesSheet';
 
 const restaurant = restaurants.brands[0];
 
@@ -24,41 +23,9 @@ const DetailsScreen = (props: any) => {
 		bottomSheetModalRef.current?.present();
 	}, []);
 
-	const RenderItem = ({ item }: { item: IItem }) => {
-		return (
-			<View style={styles.itemContainer}>
-				<View style={styles.itemInfoContainer}>
-					<Text style={styles.itemTitleText}>{item.name}</Text>
-					<Text style={styles.itemSubTitleText}>
-						{item.description}
-					</Text>
-					<Text style={styles.itemPriceText}>{item.price}</Text>
-				</View>
-				<View style={styles.itemImageContainer}>
-					<Image
-						source={{ uri: item.image }}
-						resizeMode='contain'
-						style={styles.itemImage}
-					/>
-				</View>
-			</View>
-		);
-	};
-
-	const RenderBranch = ({ branch }: { branch: IBranch }) => {
-		return (
-			<View style={styles.branchContainer}>
-				<View style={styles.branchImageContainer}>
-					<Image
-						source={{ uri: branch.image }}
-						resizeMode='contain'
-						style={styles.branchImage}
-					/>
-				</View>
-				<Text style={styles.branchNameText}>{branch.name}</Text>
-			</View>
-		);
-	};
+	const dismissBottomSheet = useCallback(() => {
+		bottomSheetModalRef.current?.dismiss();
+	}, []);
 
 	return (
 		<TouchableWithoutFeedback
@@ -106,21 +73,12 @@ const DetailsScreen = (props: any) => {
 						</Text>
 					</View>
 				</View>
-				<View style={styles.itemsListContainer}>
-					<FlatList
-						data={restaurant.items}
-						renderItem={({ item }) => <RenderItem item={item} />}
-					/>
-				</View>
+				<ItemsList data={restaurant.items} />
 				<BottomSheet bottomSheetModalRef={bottomSheetModalRef}>
-					<View style={styles.branchesListContainer}>
-						<FlatList
-							data={restaurant.branches}
-							renderItem={({ item }) => (
-								<RenderBranch branch={item} />
-							)}
-						/>
-					</View>
+					<BranchesSheet
+						data={restaurant.branches}
+						dismiss={dismissBottomSheet}
+					/>
 				</BottomSheet>
 			</View>
 		</TouchableWithoutFeedback>
