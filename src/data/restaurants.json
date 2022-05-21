@@ -6,37 +6,41 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "branches": [
                 {
-                    "name": "Nasr City"
+                    "name": "Nasr City",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
+                },
+                {
+                    "name": "Masr Al Jadidah",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
+                },
+                {
+                    "name": "Maadi",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
                     
                 },
                 {
-                    "name": "Masr Al Jadidah"
-                    
-                },
-                {
-                    "name": "Maadi"
-                    
-                },
-                {
-                    "name": "Haram"
-                    
+                    "name": "Haram",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
                 }
             ],
             "items": [
                 {
                     "name": "small sie pizza",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "120 LE."
+                    "price": "120 LE.",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
                 },
                 {
                     "name": "VIggie pizza",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "price On selection"
+                    "price": "price On selection",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
                 },
                 {
                     "name": "Cheese pizza",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "120 LE."
+                    "price": "120 LE.",
+                    "image": "https://ty-dashboard.s3.amazonaws.com/unnamed%20%281%29-1640219353386.jpg"
                 }
             ],
             "tags": [
@@ -58,37 +62,40 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "branches": [
                 {
-                    "name": "Nasr City"
-                    
+                    "name": "Nasr City",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 },
                 {
-                    "name": "Masr Al Jadidah"
-                    
+                    "name": "Masr Al Jadidah",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 },
                 {
-                    "name": "Maadi"
-                    
+                    "name": "Maadi",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 },
                 {
-                    "name": "Haram"
-                    
+                    "name": "Haram",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 }
             ],
             "items": [
                 {
                     "name": "double burger",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "120 LE."
+                    "price": "120 LE.",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 },
                 {
                     "name": "combo burger",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "price On selection"
+                    "price": "price On selection",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 },
                 {
                     "name": "Cheese burger",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "120 LE."
+                    "price": "120 LE.",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/mcdonalds-logo.png?alt=media&token=2be2db3e-e6e3-4625-9ff0-4ca7e8756e1b"
                 }
             ],
             "tags": [
@@ -120,29 +127,32 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "branches": [
                 {
-                    "name": "Nasr City"
-                    
+                    "name": "Nasr City",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/hardees-logo.png?alt=media&token=2834eb58-30e0-44e8-a935-29572994a486"
                 },
                 {
-                    "name": "Masr Al Jadidah"
-                    
+                    "name": "Masr Al Jadidah",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/hardees-logo.png?alt=media&token=2834eb58-30e0-44e8-a935-29572994a486"
                 }
             ],
             "items": [
                 {
                     "name": "combo sandawich",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "120 LE."
+                    "price": "120 LE.",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/hardees-logo.png?alt=media&token=2834eb58-30e0-44e8-a935-29572994a486"
                 },
                 {
                     "name": "double cheese sandawich",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "price On selection"
+                    "price": "price On selection",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/hardees-logo.png?alt=media&token=2834eb58-30e0-44e8-a935-29572994a486"
                 },
                 {
                     "name": "small size combo",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "120 LE."
+                    "price": "120 LE.",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/hardees-logo.png?alt=media&token=2834eb58-30e0-44e8-a935-29572994a486"
                 }
             ],
             "tags": [
@@ -173,17 +183,20 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "branches": [
                 {
-                    "name": "Nasr City"
+                    "name": "Nasr City",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/koshary-tahrir-logo.jpg?alt=media&token=4b532e9e-ce6b-4275-906b-2ad94b0c30c5"
                 },
                 {
-                    "name":  "Masr Al Jadidah"
+                    "name":  "Masr Al Jadidah",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/koshary-tahrir-logo.jpg?alt=media&token=4b532e9e-ce6b-4275-906b-2ad94b0c30c5"
                 }
             ],
             "items": [
                 {
                     "name": "super item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "price": "60 LE."
+                    "price": "60 LE.",
+                    "image": "https://firebasestorage.googleapis.com/v0/b/haader-v2.appspot.com/o/koshary-tahrir-logo.jpg?alt=media&token=4b532e9e-ce6b-4275-906b-2ad94b0c30c5"
                 }
             ],
             "tags": [
