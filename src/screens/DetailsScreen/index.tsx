@@ -12,6 +12,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import restaurants from '../../data/restaurants.json';
 import styles from './styles';
 import BottomSheet from '../../components/BottomSheet';
+import IItem from '../../models/IItem';
+import IBranch from '../../models/IBranch';
 
 const restaurant = restaurants.brands[0];
 
@@ -22,7 +24,7 @@ const DetailsScreen = (props: any) => {
 		bottomSheetModalRef.current?.present();
 	}, []);
 
-	const RenderItem = ({ item }: { item: any }) => {
+	const RenderItem = ({ item }: { item: IItem }) => {
 		return (
 			<View style={styles.itemContainer}>
 				<View style={styles.itemInfoContainer}>
@@ -43,7 +45,7 @@ const DetailsScreen = (props: any) => {
 		);
 	};
 
-	const RenderBranch = ({ branch }: { branch: any }) => {
+	const RenderBranch = ({ branch }: { branch: IBranch }) => {
 		return (
 			<View style={styles.branchContainer}>
 				<View style={styles.branchImageContainer}>

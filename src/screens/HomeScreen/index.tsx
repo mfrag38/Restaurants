@@ -3,10 +3,12 @@ import { View, Text, TextInput, FlatList, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import restaurants from '../../data/restaurants.json';
 import tags from '../../data/tags.json';
+import IRestaurant from '../../models/IRestaurant';
+import ITag from '../../models/ITag';
 import styles from './styles';
 
 const HomeScreen = (props: any) => {
-	const RenderTag = ({ tag }: { tag: any }) => {
+	const RenderTag = ({ tag }: { tag: ITag }) => {
 		return (
 			<View style={styles.tagContainer}>
 				<Image
@@ -21,7 +23,7 @@ const HomeScreen = (props: any) => {
 		);
 	};
 
-	const RenderRestaurant = ({ restaurant }: { restaurant: any }) => {
+	const RenderRestaurant = ({ restaurant }: { restaurant: IRestaurant }) => {
 		return (
 			<View style={styles.restaurantContainer}>
 				<View style={styles.restaurantImageContainer}>
@@ -36,7 +38,9 @@ const HomeScreen = (props: any) => {
 						{restaurant.name}
 					</Text>
 					<Text style={styles.restaurantSubTitleText}>
-						{restaurant.tags.map((tag: any) => tag.name).join(', ')}
+						{restaurant.tags
+							.map((tag: ITag) => tag.name)
+							.join(', ')}
 					</Text>
 				</View>
 			</View>
