@@ -2,6 +2,11 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import styles from './styles';
 
+/**
+ * This function takes in a branch object and returns a view with an image and a text.
+ * @param {any} props - any
+ * @returns A React component.
+ */
 const Branch = (props: any) => {
 	const { branch } = props;
 

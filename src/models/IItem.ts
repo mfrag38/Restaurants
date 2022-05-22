@@ -1,3 +1,4 @@
+/* Defining the structure of the item object. */
 interface IItem {
 	name: string;
 	description: string;

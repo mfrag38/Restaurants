@@ -3,6 +3,12 @@ import { Image, Text, View, TouchableOpacity } from 'react-native';
 import ITag from '../../../models/ITag';
 import styles from './styles';
 
+/**
+ * The Restaurant function takes in a restaurant object and a function called onRestaurantPress and
+ * returns a view with a touchable opacity that calls the onRestaurantPress function when pressed.
+ * @param {any} props - any
+ * @returns A React component
+ */
 const Restaurant = (props: any) => {
 	const { restaurant, onRestaurantPress } = props;
 

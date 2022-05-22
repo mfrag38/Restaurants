@@ -1,13 +1,12 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { SET_SELECTED_TAG, SET_TAGS, SET_LIST } from '../types';
-import { brands } from '../../data/restaurants.json';
-import tags from '../../data/tags.json';
 
+/* Creating a reducer. */
 export default createReducer(
 	{
 		selectedTag: '',
-		tags: tags,
-		list: brands,
+		tags: [],
+		list: [],
 	},
 	(builder) => {
 		builder.addCase(SET_SELECTED_TAG, (state, action: any) => {

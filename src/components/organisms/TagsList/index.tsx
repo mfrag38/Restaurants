@@ -7,16 +7,18 @@ import styles from './styles';
 const TagsList = (props: any) => {
 	const { data, selectedTag, onTagPress } = props;
 
+	/**
+	 * RenderTag is a function that takes in a tag and returns a Tag component with the tag, onTagPress,
+	 * and selected props.
+	 * @param  - `tag` - the tag object
+	 * @returns A function that returns a component.
+	 */
 	const RenderTag = ({ tag }: { tag: ITag }) => {
 		return (
 			<Tag
 				tag={tag}
-				onTagPress={
-					selectedTag === tag.name
-						? () => {
-								onTagPress();
-						  }
-						: () => onTagPress(tag.name)
+				onTagPress={() =>
+					onTagPress(selectedTag === tag.name ? null : tag.name)
 				}
 				selected={selectedTag === tag.name}
 			/>

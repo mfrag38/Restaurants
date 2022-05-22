@@ -3,6 +3,11 @@ import { View, Text, Image } from 'react-native';
 import IItem from '../../../models/IItem';
 import styles from './styles';
 
+/**
+ * This function takes in an item object and returns a view with an image and some texts.
+ * @param {any} props - any
+ * @returns A React component.
+ */
 const Item = (props: any) => {
 	const { item }: { item: IItem } = props;
 

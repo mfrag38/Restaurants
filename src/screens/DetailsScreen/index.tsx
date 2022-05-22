@@ -1,10 +1,11 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
 	View,
 	Text,
 	Image,
 	TouchableOpacity,
 	TouchableWithoutFeedback,
+	ActivityIndicator,
 } from 'react-native';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,17 +17,32 @@ import BranchesSheet from '../../components/UI/BranchesSheet';
 const DetailsScreen = (props: any) => {
 	const { restaurant } = props.route.params;
 
+	const [isLoading, setIsLoading] = useState(true);
+
 	const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
+	/* A hook that is used to simulate a loading state. */
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 1000);
+	}, []);
+
+	/* A function that is used to present the bottom sheet. */
 	const presentBottomSheet = useCallback(() => {
 		bottomSheetModalRef.current?.present();
 	}, []);
 
+	/* A function that is used to dismiss the bottom sheet. */
 	const dismissBottomSheet = useCallback(() => {
 		bottomSheetModalRef.current?.dismiss();
 	}, []);
 
-	return (
+	return isLoading ? (
+		<View style={styles.container}>
+			<ActivityIndicator color='#000' size={32} />
+		</View>
+	) : (
 		<TouchableWithoutFeedback
 			onPress={() => bottomSheetModalRef.current?.close()}
 		>
