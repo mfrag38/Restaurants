@@ -14,9 +14,9 @@ import ItemsList from '../../components/organisms/ItemsList';
 import BottomSheet from '../../components/UI/BottomSheet';
 import BranchesSheet from '../../components/UI/BranchesSheet';
 
-const restaurant = restaurants.brands[0];
-
 const DetailsScreen = (props: any) => {
+	const { restaurant } = props.route.params;
+
 	const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
 	const presentBottomSheet = useCallback(() => {
@@ -41,7 +41,7 @@ const DetailsScreen = (props: any) => {
 					<View style={styles.backButtonContainer}>
 						<TouchableOpacity
 							style={styles.backButton}
-							onPress={() => console.log('Should Go Back')}
+							onPress={() => props.navigation.goBack()}
 						>
 							<Icon name='chevron-left' size={24} color='#000' />
 						</TouchableOpacity>
@@ -69,7 +69,9 @@ const DetailsScreen = (props: any) => {
 							{restaurant.name}
 						</Text>
 						<Text style={styles.restaurantSubTitleText}>
-							{restaurant.tags.map((tag) => tag.name).join(', ')}
+							{restaurant.tags
+								.map((tag: any) => tag.name)
+								.join(', ')}
 						</Text>
 					</View>
 				</View>

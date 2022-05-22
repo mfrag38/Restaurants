@@ -5,10 +5,19 @@ import Restaurant from '../../molecules/Restaurant';
 import styles from './styles';
 
 const RestaurantsList = (props: any) => {
-	const { data } = props;
+	const { data, navigation } = props;
 
 	const RenderRestaurant = ({ restaurant }: { restaurant: IRestaurant }) => {
-		return <Restaurant restaurant={restaurant} />;
+		return (
+			<Restaurant
+				restaurant={restaurant}
+				onRestaurantPress={() =>
+					navigation.navigate('Details', {
+						restaurant: restaurant,
+					})
+				}
+			/>
+		);
 	};
 
 	return (

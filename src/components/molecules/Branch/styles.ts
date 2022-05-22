@@ -13,16 +13,17 @@ export default StyleSheet.create({
 		borderBottomColor: '#888',
 	},
 	branchImageContainer: {
-		width: scale(75),
-		height: scale(75),
+		width: scale(60),
+		height: scale(60),
 		justifyContent: 'center',
 		alignItems: 'center',
-		borderRadius: scale(50),
+		borderRadius: scale(60),
 		overflow: 'hidden',
+		backgroundColor: '#080',
 	},
 	branchImage: {
-		width: scale(75),
-		height: scale(75),
+		width: scale(60),
+		height: scale(60),
 	},
 	branchNameText: {
 		flex: 1,

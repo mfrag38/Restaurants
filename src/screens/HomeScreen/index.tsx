@@ -30,7 +30,10 @@ const HomeScreen = (props: any) => {
 				<View style={styles.bodyTitleContainer}>
 					<Text style={styles.bodyTitle}>Restaurants</Text>
 				</View>
-				<RestaurantsList data={restaurants.brands} />
+				<RestaurantsList
+					data={restaurants.brands}
+					navigation={props.navigation}
+				/>
 			</View>
 		</View>
 	);
