@@ -18,6 +18,7 @@ const RestaurantsList = (props: any) => {
 				renderItem={({ item }) => (
 					<RenderRestaurant restaurant={item} />
 				)}
+				showsVerticalScrollIndicator={false}
 			/>
 		</View>
 	);

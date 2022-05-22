@@ -16,6 +16,7 @@ const ItemsList = (props: any) => {
 			<FlatList
 				data={data}
 				renderItem={({ item }) => <RenderItem item={item} />}
+				showsVerticalScrollIndicator={false}
 			/>
 		</View>
 	);

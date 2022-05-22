@@ -16,6 +16,7 @@ const BranchesList = (props: any) => {
 			<FlatList
 				data={data}
 				renderItem={({ item }) => <RenderBranch branch={item} />}
+				showsVerticalScrollIndicator={false}
 			/>
 		</View>
 	);

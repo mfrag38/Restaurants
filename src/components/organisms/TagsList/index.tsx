@@ -17,6 +17,7 @@ const TagsList = (props: any) => {
 				data={data}
 				renderItem={({ item }) => <RenderTag tag={item} />}
 				horizontal
+				showsHorizontalScrollIndicator={false}
 			/>
 		</View>
 	);
