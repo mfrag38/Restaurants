@@ -5,10 +5,22 @@ import Tag from '../../molecules/Tag';
 import styles from './styles';
 
 const TagsList = (props: any) => {
-	const { data } = props;
+	const { data, selectedTag, onTagPress } = props;
 
 	const RenderTag = ({ tag }: { tag: ITag }) => {
-		return <Tag tag={tag} />;
+		return (
+			<Tag
+				tag={tag}
+				onTagPress={
+					selectedTag === tag.name
+						? () => {
+								onTagPress();
+						  }
+						: () => onTagPress(tag.name)
+				}
+				selected={selectedTag === tag.name}
+			/>
+		);
 	};
 
 	return (

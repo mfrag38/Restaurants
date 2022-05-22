@@ -5,6 +5,8 @@ export default StyleSheet.create({
 	container: {
 		marginHorizontal: scale(8),
 		marginVertical: scale(4),
+	},
+	selected: {
 		borderBottomWidth: scale(2),
 		borderBottomColor: '#ff0',
 	},

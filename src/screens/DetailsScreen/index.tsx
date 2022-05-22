@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import restaurants from '../../data/restaurants.json';
 import styles from './styles';
 import ItemsList from '../../components/organisms/ItemsList';
 import BottomSheet from '../../components/UI/BottomSheet';
