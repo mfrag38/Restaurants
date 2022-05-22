@@ -3,14 +3,13 @@ import { View, Text, TextInput } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import restaurants from '../../data/restaurants.json';
-import tags from '../../data/tags.json';
 import TagsList from '../../components/organisms/TagsList';
 import RestaurantsList from '../../components/organisms/RestaurantsList';
 import { setList, setSelectedTag } from '../../redux/actions/homeActions';
 import styles from './styles';
 
 const HomeScreen = (props: any) => {
-	const { selectedTag, list } = useSelector((state: any) => state.Home);
+	const { selectedTag, list, tags } = useSelector((state: any) => state.Home);
 	const [searchTerm, setSearchTerm] = useState('');
 
 	const dispatch = useDispatch();
